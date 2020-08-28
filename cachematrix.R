@@ -1,5 +1,9 @@
 ## Create a Special Matrix that can store its inverse value in cache.
-
+## The function return a list of 4 functions
+## set(args) store the matrix in this special matrix
+## get() return the stored matrix
+## setinverse(inv) store the inverse value of the matrix
+## getinverse() return the stored inverse value of the matrix
 makeCacheMatrix <- function(x = matrix()) {
   inverse <- NULL
   set <- function(y) {
@@ -15,7 +19,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## A special cache function that calculate inverse of matrix only
+## A special cache function that calculate inverse of special matrix( from above function) only
 ## if it has not been calculcated to save computation cost
 
 cacheSolve <- function(x, ...) {
